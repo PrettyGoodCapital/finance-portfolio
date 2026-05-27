@@ -1,0 +1,13 @@
+# finance portfolio
+
+Standard financial portfolio tools
+
+[![Build Status](https://github.com/prettygoodcapital/finance-portfolio/actions/workflows/build.yaml/badge.svg?branch=main&event=push)](https://github.com/prettygoodcapital/finance-portfolio/actions/workflows/build.yaml)
+[![codecov](https://codecov.io/gh/prettygoodcapital/finance-portfolio/branch/main/graph/badge.svg)](https://codecov.io/gh/prettygoodcapital/finance-portfolio)
+[![License](https://img.shields.io/github/license/prettygoodcapital/finance-portfolio)](https://github.com/prettygoodcapital/finance-portfolio)
+[![PyPI](https://img.shields.io/pypi/v/finance-portfolio.svg)](https://pypi.python.org/pypi/finance-portfolio)
+
+## Overview
+
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
