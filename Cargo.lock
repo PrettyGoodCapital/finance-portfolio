@@ -3,14 +3,14 @@
 version = 4
 
 [[package]]
-name = "finance_portfolio"
+name = "finance-portfolio"
 version = "0.1.0"
 
 [[package]]
 name = "finance_portfolio_py"
 version = "0.1.0"
 dependencies = [
- "finance_portfolio",
+ "finance-portfolio",
  "pyo3",
 ]
 
