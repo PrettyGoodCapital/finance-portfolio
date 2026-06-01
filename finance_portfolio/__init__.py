@@ -2,6 +2,14 @@ from __future__ import annotations
 
 __version__ = "0.1.0"
 
+from .analysis import (  # noqa: F401
+    active_weights,
+    portfolio_analysis_panel,
+    rebalance_schedule,
+    return_contributions,
+    turnover,
+    weight_drift,
+)
 from .analytics import RiskContribution, active_share, portfolio_variance, portfolio_volatility, risk_contribution, tracking_error  # noqa: F401
 from .attribution import (  # noqa: F401
     BrinsonAttribution,
@@ -33,6 +41,12 @@ __all__ = [
     "risk_contribution",
     "tracking_error",
     "active_share",
+    "active_weights",
+    "weight_drift",
+    "turnover",
+    "return_contributions",
+    "rebalance_schedule",
+    "portfolio_analysis_panel",
     "BrinsonAttribution",
     "ReturnAttribution",
     "brinson_attribution",
