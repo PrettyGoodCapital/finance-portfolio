@@ -1,15 +1,27 @@
 from __future__ import annotations
 
+from datetime import date
+
 import numpy as np
 import pytest
+from finance_enums import Frequency
 
 import finance_portfolio as fp
 
 
 def test_portfolio_structures_and_weight_construction() -> None:
-    portfolio = fp.Portfolio.from_weights({"A": 0.6, "B": 0.4}, name="core")
+    portfolio = fp.Portfolio.from_weights(
+        {"A": 0.6, "B": 0.4},
+        name="core",
+        as_of=date(2024, 1, 31),
+        calendar="XNYS",
+        frequency="monthly",
+    )
 
     assert portfolio.name == "core"
+    assert portfolio.as_of == date(2024, 1, 31)
+    assert portfolio.calendar == "XNYS"
+    assert portfolio.frequency == Frequency.Month
     assert portfolio.net_exposure == pytest.approx(1.0)
     assert portfolio.gross_exposure == pytest.approx(1.0)
     assert portfolio.weight("A") == pytest.approx(0.6)
@@ -60,7 +72,16 @@ def test_tracking_active_share_and_attribution() -> None:
 
 
 def test_index_structures_normalize_constituents() -> None:
-    index = fp.Index.from_constituents({"A": 50.0, "B": 50.0}, name="PGC 2")
+    index = fp.Index.from_constituents(
+        {"A": 50.0, "B": 50.0},
+        name="PGC 2",
+        as_of=date(2024, 1, 31),
+        divisor=1000.0,
+        frequency=Frequency.Quarter,
+    )
 
     assert index.name == "PGC 2"
+    assert index.as_of == date(2024, 1, 31)
+    assert index.divisor == pytest.approx(1000.0)
+    assert index.frequency == Frequency.Quarter
     assert index.weights == {"A": pytest.approx(0.5), "B": pytest.approx(0.5)}
