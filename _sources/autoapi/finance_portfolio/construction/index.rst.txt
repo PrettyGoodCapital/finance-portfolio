@@ -1,0 +1,28 @@
+finance_portfolio.construction
+==============================
+
+.. py:module:: finance_portfolio.construction
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   finance_portfolio.construction.equal_weights
+   finance_portfolio.construction.rank_weights
+   finance_portfolio.construction.signal_proportional_weights
+   finance_portfolio.construction.target_volatility_weights
+
+
+Module Contents
+---------------
+
+.. py:function:: equal_weights(assets: Iterable[str]) -> dict[str, float]
+
+.. py:function:: rank_weights(signals: Mapping[str, float], *, ascending: bool = True) -> dict[str, float]
+
+.. py:function:: signal_proportional_weights(signals: Mapping[str, float]) -> dict[str, float]
+
+.. py:function:: target_volatility_weights(volatility: Mapping[str, float]) -> dict[str, float]
+

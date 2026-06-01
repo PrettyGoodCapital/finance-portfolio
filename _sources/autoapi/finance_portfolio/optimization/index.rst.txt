@@ -1,0 +1,28 @@
+finance_portfolio.optimization
+==============================
+
+.. py:module:: finance_portfolio.optimization
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   finance_portfolio.optimization.minimum_variance_weights
+   finance_portfolio.optimization.mean_variance_weights
+   finance_portfolio.optimization.risk_parity_weights
+   finance_portfolio.optimization.hierarchical_risk_parity_weights
+
+
+Module Contents
+---------------
+
+.. py:function:: minimum_variance_weights(covariance: Any, *, assets: Sequence[str] | None = None) -> dict[str, float]
+
+.. py:function:: mean_variance_weights(expected_returns: Any, covariance: Any, *, risk_aversion: float = 1.0, assets: Sequence[str] | None = None) -> dict[str, float]
+
+.. py:function:: risk_parity_weights(covariance: Any, *, assets: Sequence[str] | None = None, max_iter: int = 1000, tolerance: float = 1e-10) -> dict[str, float]
+
+.. py:function:: hierarchical_risk_parity_weights(covariance: Any, *, assets: Sequence[str] | None = None) -> dict[str, float]
+

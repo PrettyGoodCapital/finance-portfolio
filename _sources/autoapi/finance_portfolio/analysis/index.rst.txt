@@ -1,0 +1,34 @@
+finance_portfolio.analysis
+==========================
+
+.. py:module:: finance_portfolio.analysis
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   finance_portfolio.analysis.active_weights
+   finance_portfolio.analysis.weight_drift
+   finance_portfolio.analysis.turnover
+   finance_portfolio.analysis.return_contributions
+   finance_portfolio.analysis.rebalance_schedule
+   finance_portfolio.analysis.portfolio_analysis_panel
+
+
+Module Contents
+---------------
+
+.. py:function:: active_weights(weights: collections.abc.Mapping[str, float], benchmark_weights: collections.abc.Mapping[str, float]) -> dict[str, float]
+
+.. py:function:: weight_drift(current_weights: collections.abc.Mapping[str, float], target_weights: collections.abc.Mapping[str, float]) -> dict[str, float]
+
+.. py:function:: turnover(previous_weights: collections.abc.Mapping[str, float], next_weights: collections.abc.Mapping[str, float]) -> float
+
+.. py:function:: return_contributions(weights: collections.abc.Mapping[str, float], returns: collections.abc.Mapping[str, float]) -> dict[str, float]
+
+.. py:function:: rebalance_schedule(dates: collections.abc.Sequence[datetime.date], frequency: finance_enums.Frequency | str) -> tuple[datetime.date, Ellipsis]
+
+.. py:function:: portfolio_analysis_panel(*, as_of: datetime.date, weights: collections.abc.Mapping[str, float], benchmark_weights: collections.abc.Mapping[str, float] | None = None, returns: collections.abc.Mapping[str, float] | None = None) -> polars.DataFrame
+
