@@ -35,6 +35,12 @@ Functions
 
 .. autoapisummary::
 
+   finance_portfolio.active_weights
+   finance_portfolio.portfolio_analysis_panel
+   finance_portfolio.rebalance_schedule
+   finance_portfolio.return_contributions
+   finance_portfolio.turnover
+   finance_portfolio.weight_drift
    finance_portfolio.active_share
    finance_portfolio.portfolio_variance
    finance_portfolio.portfolio_volatility
@@ -52,6 +58,18 @@ Functions
 
 Package Contents
 ----------------
+
+.. py:function:: active_weights(weights: collections.abc.Mapping[str, float], benchmark_weights: collections.abc.Mapping[str, float]) -> dict[str, float]
+
+.. py:function:: portfolio_analysis_panel(*, as_of: datetime.date, weights: collections.abc.Mapping[str, float], benchmark_weights: collections.abc.Mapping[str, float] | None = None, returns: collections.abc.Mapping[str, float] | None = None) -> polars.DataFrame
+
+.. py:function:: rebalance_schedule(dates: collections.abc.Sequence[datetime.date], frequency: finance_enums.Frequency | str) -> tuple[datetime.date, Ellipsis]
+
+.. py:function:: return_contributions(weights: collections.abc.Mapping[str, float], returns: collections.abc.Mapping[str, float]) -> dict[str, float]
+
+.. py:function:: turnover(previous_weights: collections.abc.Mapping[str, float], next_weights: collections.abc.Mapping[str, float]) -> float
+
+.. py:function:: weight_drift(current_weights: collections.abc.Mapping[str, float], target_weights: collections.abc.Mapping[str, float]) -> dict[str, float]
 
 .. py:class:: RiskContribution(/, **data: Any)
 
@@ -299,6 +317,18 @@ Package Contents
       :type:  float
 
 
+   .. py:attribute:: currency
+      :type:  str | None
+      :value: None
+
+
+
+   .. py:attribute:: exchange
+      :type:  str | None
+      :value: None
+
+
+
 .. py:class:: Index(/, **data: Any)
 
    Bases: :py:obj:`pydantic.BaseModel`
@@ -409,7 +439,25 @@ Package Contents
 
 
 
-   .. py:method:: from_constituents(values: Mapping[str, float], *, name: str | None = None) -> Index
+   .. py:attribute:: as_of
+      :type:  datetime.date | None
+      :value: None
+
+
+
+   .. py:attribute:: divisor
+      :type:  float | None
+      :value: None
+
+
+
+   .. py:attribute:: frequency
+      :type:  finance_enums.Frequency | None
+      :value: None
+
+
+
+   .. py:method:: from_constituents(values: Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, divisor: float | None = None, frequency: finance_enums.Frequency | str | None = None) -> Index
       :classmethod:
 
 
@@ -527,6 +575,12 @@ Package Contents
       :type:  float
 
 
+   .. py:attribute:: free_float
+      :type:  float | None
+      :value: None
+
+
+
 .. py:class:: Portfolio(/, **data: Any)
 
    Bases: :py:obj:`pydantic.BaseModel`
@@ -637,7 +691,30 @@ Package Contents
 
 
 
-   .. py:method:: from_weights(weights: Mapping[str, float], *, name: str | None = None) -> Portfolio
+   .. py:attribute:: as_of
+      :type:  datetime.date | None
+      :value: None
+
+
+
+   .. py:attribute:: calendar
+      :type:  str | None
+      :value: None
+
+
+
+   .. py:attribute:: frequency
+      :type:  finance_enums.Frequency | None
+      :value: None
+
+
+
+   .. py:method:: _coerce_frequency(value: finance_enums.Frequency | str | None) -> finance_enums.Frequency | None
+      :classmethod:
+
+
+
+   .. py:method:: from_weights(weights: Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, calendar: str | None = None, frequency: finance_enums.Frequency | str | None = None) -> Portfolio
       :classmethod:
 
 

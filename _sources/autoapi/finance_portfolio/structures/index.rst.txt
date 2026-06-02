@@ -126,6 +126,18 @@ Module Contents
       :type:  float
 
 
+   .. py:attribute:: currency
+      :type:  str | None
+      :value: None
+
+
+
+   .. py:attribute:: exchange
+      :type:  str | None
+      :value: None
+
+
+
 .. py:class:: Portfolio(/, **data: Any)
 
    Bases: :py:obj:`pydantic.BaseModel`
@@ -236,7 +248,30 @@ Module Contents
 
 
 
-   .. py:method:: from_weights(weights: Mapping[str, float], *, name: str | None = None) -> Portfolio
+   .. py:attribute:: as_of
+      :type:  datetime.date | None
+      :value: None
+
+
+
+   .. py:attribute:: calendar
+      :type:  str | None
+      :value: None
+
+
+
+   .. py:attribute:: frequency
+      :type:  finance_enums.Frequency | None
+      :value: None
+
+
+
+   .. py:method:: _coerce_frequency(value: finance_enums.Frequency | str | None) -> finance_enums.Frequency | None
+      :classmethod:
+
+
+
+   .. py:method:: from_weights(weights: Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, calendar: str | None = None, frequency: finance_enums.Frequency | str | None = None) -> Portfolio
       :classmethod:
 
 
@@ -367,6 +402,12 @@ Module Contents
       :type:  float
 
 
+   .. py:attribute:: free_float
+      :type:  float | None
+      :value: None
+
+
+
 .. py:class:: Index(/, **data: Any)
 
    Bases: :py:obj:`pydantic.BaseModel`
@@ -477,7 +518,25 @@ Module Contents
 
 
 
-   .. py:method:: from_constituents(values: Mapping[str, float], *, name: str | None = None) -> Index
+   .. py:attribute:: as_of
+      :type:  datetime.date | None
+      :value: None
+
+
+
+   .. py:attribute:: divisor
+      :type:  float | None
+      :value: None
+
+
+
+   .. py:attribute:: frequency
+      :type:  finance_enums.Frequency | None
+      :value: None
+
+
+
+   .. py:method:: from_constituents(values: Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, divisor: float | None = None, frequency: finance_enums.Frequency | str | None = None) -> Index
       :classmethod:
 
 

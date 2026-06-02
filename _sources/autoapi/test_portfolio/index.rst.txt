@@ -13,6 +13,8 @@ Functions
    test_portfolio.test_optimizers_and_risk_contributions
    test_portfolio.test_tracking_active_share_and_attribution
    test_portfolio.test_index_structures_normalize_constituents
+   test_portfolio.test_portfolio_analysis_helpers
+   test_portfolio.test_rebalance_schedule_and_panel_output
 
 
 Module Contents
@@ -25,4 +27,8 @@ Module Contents
 .. py:function:: test_tracking_active_share_and_attribution() -> None
 
 .. py:function:: test_index_structures_normalize_constituents() -> None
+
+.. py:function:: test_portfolio_analysis_helpers() -> None
+
+.. py:function:: test_rebalance_schedule_and_panel_output() -> None
 
