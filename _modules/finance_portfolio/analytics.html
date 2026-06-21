@@ -264,7 +264,7 @@
 
 
 <div class="viewcode-block" id="RiskContribution">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/index.html#finance_portfolio.analytics.RiskContribution">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/analytics/index.html#finance_portfolio.analytics.RiskContribution">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">RiskContribution</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">arbitrary_types_allowed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -282,7 +282,7 @@
 
 
 <div class="viewcode-block" id="portfolio_variance">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/index.html#finance_portfolio.analytics.portfolio_variance">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/analytics/index.html#finance_portfolio.analytics.portfolio_variance">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">portfolio_variance</span><span class="p">(</span><span class="n">weights</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="n">w</span> <span class="o">=</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
@@ -293,7 +293,7 @@
 
 
 <div class="viewcode-block" id="portfolio_volatility">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/index.html#finance_portfolio.analytics.portfolio_volatility">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/analytics/index.html#finance_portfolio.analytics.portfolio_volatility">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">portfolio_volatility</span><span class="p">(</span><span class="n">weights</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="n">w</span> <span class="o">=</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
@@ -304,7 +304,7 @@
 
 
 <div class="viewcode-block" id="risk_contribution">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/index.html#finance_portfolio.analytics.risk_contribution">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/analytics/index.html#finance_portfolio.analytics.risk_contribution">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">risk_contribution</span><span class="p">(</span><span class="n">weights</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RiskContribution</span><span class="p">:</span>
     <span class="n">w</span> <span class="o">=</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
@@ -320,7 +320,7 @@
 
 
 <div class="viewcode-block" id="tracking_error">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/index.html#finance_portfolio.analytics.tracking_error">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/analytics/index.html#finance_portfolio.analytics.tracking_error">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">tracking_error</span><span class="p">(</span><span class="n">weights</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="n">Any</span><span class="p">,</span> <span class="n">benchmark_weights</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="n">Any</span><span class="p">,</span> <span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="n">assets</span> <span class="o">=</span> <span class="p">(</span>
         <span class="nb">tuple</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">([</span><span class="o">*</span><span class="n">weights</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="o">*</span><span class="n">benchmark_weights</span><span class="o">.</span><span class="n">keys</span><span class="p">()]))</span>
@@ -336,7 +336,7 @@
 
 
 <div class="viewcode-block" id="active_share">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/index.html#finance_portfolio.analytics.active_share">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/analytics/index.html#finance_portfolio.analytics.active_share">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">active_share</span><span class="p">(</span><span class="n">weights</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="n">benchmark_weights</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="n">assets</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="n">benchmark_weights</span><span class="p">)</span>
     <span class="n">active</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">asset</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">benchmark_weights</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">asset</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span> <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">assets</span><span class="p">]</span>
