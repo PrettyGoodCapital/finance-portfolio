@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Any, Mapping, Sequence
+from collections.abc import Mapping, Sequence
+from typing import Any
 
 import numpy as np
 from pydantic import BaseModel, ConfigDict
@@ -9,11 +10,11 @@ from . import finance_portfolio as _native
 
 __all__ = [
     "RiskContribution",
+    "active_share",
     "portfolio_variance",
     "portfolio_volatility",
     "risk_contribution",
     "tracking_error",
-    "active_share",
 ]
 
 
