@@ -145,7 +145,7 @@ Module Contents
 
 .. py:function:: risk_contribution(weights: Any, covariance: Any) -> RiskContribution
 
-.. py:function:: tracking_error(weights: Mapping[str, float] | Any, benchmark_weights: Mapping[str, float] | Any, covariance: Any) -> float
+.. py:function:: tracking_error(weights: collections.abc.Mapping[str, float] | Any, benchmark_weights: collections.abc.Mapping[str, float] | Any, covariance: Any) -> float
 
-.. py:function:: active_share(weights: Mapping[str, float], benchmark_weights: Mapping[str, float]) -> float
+.. py:function:: active_share(weights: collections.abc.Mapping[str, float], benchmark_weights: collections.abc.Mapping[str, float]) -> float
 

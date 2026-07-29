@@ -18,11 +18,11 @@ Functions
 Module Contents
 ---------------
 
-.. py:function:: equal_weights(assets: Iterable[str]) -> dict[str, float]
+.. py:function:: equal_weights(assets: collections.abc.Iterable[str]) -> dict[str, float]
 
-.. py:function:: rank_weights(signals: Mapping[str, float], *, ascending: bool = True) -> dict[str, float]
+.. py:function:: rank_weights(signals: collections.abc.Mapping[str, float], *, ascending: bool = True) -> dict[str, float]
 
-.. py:function:: signal_proportional_weights(signals: Mapping[str, float]) -> dict[str, float]
+.. py:function:: signal_proportional_weights(signals: collections.abc.Mapping[str, float]) -> dict[str, float]
 
-.. py:function:: target_volatility_weights(volatility: Mapping[str, float]) -> dict[str, float]
+.. py:function:: target_volatility_weights(volatility: collections.abc.Mapping[str, float]) -> dict[str, float]
 

@@ -271,7 +271,7 @@ Module Contents
 
 
 
-   .. py:method:: from_weights(weights: Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, calendar: str | None = None, frequency: finance_enums.Frequency | str | None = None) -> Portfolio
+   .. py:method:: from_weights(weights: collections.abc.Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, calendar: str | None = None, frequency: finance_enums.Frequency | str | None = None) -> Portfolio
       :classmethod:
 
 
@@ -536,7 +536,7 @@ Module Contents
 
 
 
-   .. py:method:: from_constituents(values: Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, divisor: float | None = None, frequency: finance_enums.Frequency | str | None = None) -> Index
+   .. py:method:: from_constituents(values: collections.abc.Mapping[str, float], *, name: str | None = None, as_of: datetime.date | None = None, divisor: float | None = None, frequency: finance_enums.Frequency | str | None = None) -> Index
       :classmethod:
 
 

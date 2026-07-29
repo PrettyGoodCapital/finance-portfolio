@@ -250,9 +250,9 @@ Module Contents
       :type:  float
 
 
-.. py:function:: brinson_attribution(*, portfolio_weights: Mapping[str, float], benchmark_weights: Mapping[str, float], portfolio_returns: Mapping[str, float], benchmark_returns: Mapping[str, float]) -> BrinsonAttribution
+.. py:function:: brinson_attribution(*, portfolio_weights: collections.abc.Mapping[str, float], benchmark_weights: collections.abc.Mapping[str, float], portfolio_returns: collections.abc.Mapping[str, float], benchmark_returns: collections.abc.Mapping[str, float]) -> BrinsonAttribution
 
-.. py:function:: factor_return_decomposition(exposures: Mapping[str, float], factor_returns: Mapping[str, float]) -> ReturnAttribution
+.. py:function:: factor_return_decomposition(exposures: collections.abc.Mapping[str, float], factor_returns: collections.abc.Mapping[str, float]) -> ReturnAttribution
 
-.. py:function:: return_attribution_decomposition(components: Mapping[str, float]) -> ReturnAttribution
+.. py:function:: return_attribution_decomposition(components: collections.abc.Mapping[str, float]) -> ReturnAttribution
 
