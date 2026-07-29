@@ -15,7 +15,7 @@ def test_native_backend_exposes_portfolio_kernels() -> None:
 
 
 def test_public_optimizer_delegates_to_native_backend(monkeypatch: pytest.MonkeyPatch) -> None:
-    import finance_portfolio.optimization as optimization
+    from finance_portfolio import optimization
 
     called: dict[str, object] = {}
 

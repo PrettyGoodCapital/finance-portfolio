@@ -1,12 +1,12 @@
 from __future__ import annotations
 
+from collections.abc import Mapping
 from datetime import date
-from typing import Mapping
 
 from finance_enums import Frequency, to_frequency
 from pydantic import BaseModel, ConfigDict
 
-__all__ = ["Holding", "Portfolio", "IndexConstituent", "Index"]
+__all__ = ["Holding", "Index", "IndexConstituent", "Portfolio"]
 
 
 class Holding(BaseModel):
@@ -42,7 +42,7 @@ class Portfolio(BaseModel):
         as_of: date | None = None,
         calendar: str | None = None,
         frequency: Frequency | str | None = None,
-    ) -> "Portfolio":
+    ) -> Portfolio:
         return cls(
             holdings=tuple(Holding(symbol=str(symbol), weight=float(weight)) for symbol, weight in weights.items()),
             name=name,
@@ -93,7 +93,7 @@ class Index(BaseModel):
         as_of: date | None = None,
         divisor: float | None = None,
         frequency: Frequency | str | None = None,
-    ) -> "Index":
+    ) -> Index:
         total = sum(float(value) for value in values.values())
         if total <= 0.0:
             raise ValueError("constituent values must have positive total")

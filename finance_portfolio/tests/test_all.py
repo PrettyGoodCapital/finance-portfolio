@@ -1,4 +1,4 @@
-from finance_portfolio import *  # noqa
+from finance_portfolio import *
 
 
 def test_all():

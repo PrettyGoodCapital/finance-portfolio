@@ -8,11 +8,11 @@ from finance_enums import Frequency, to_frequency
 
 __all__ = [
     "active_weights",
-    "weight_drift",
-    "turnover",
-    "return_contributions",
-    "rebalance_schedule",
     "portfolio_analysis_panel",
+    "rebalance_schedule",
+    "return_contributions",
+    "turnover",
+    "weight_drift",
 ]
 
 

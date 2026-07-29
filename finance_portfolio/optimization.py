@@ -1,12 +1,13 @@
 from __future__ import annotations
 
-from typing import Any, Sequence
+from collections.abc import Sequence
+from typing import Any
 
 import numpy as np
 
 from . import finance_portfolio as _native
 
-__all__ = ["minimum_variance_weights", "mean_variance_weights", "risk_parity_weights", "hierarchical_risk_parity_weights"]
+__all__ = ["hierarchical_risk_parity_weights", "mean_variance_weights", "minimum_variance_weights", "risk_parity_weights"]
 
 
 def _labels(assets: Sequence[str] | None, size: int) -> tuple[str, ...]:
