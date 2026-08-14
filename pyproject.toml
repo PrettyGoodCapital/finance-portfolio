@@ -13,7 +13,7 @@ authors = [
 description = "Standard financial portfolio tools"
 readme = "README.md"
 license = { text = "Apache-2.0" }
-version = "0.1.0"
+version = "0.1.1"
 requires-python = ">=3.11"
 keywords = []
 
@@ -31,7 +31,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "finance-enums>=0.5.1,<0.6",
+    "finance-enums>=0.5.1,<0.8",
     "numpy>=1.26",
     "polars",
     "pydantic>=2",
@@ -64,7 +64,7 @@ Repository = "https://github.com/prettygoodcapital/finance-portfolio"
 Homepage = "https://github.com/prettygoodcapital/finance-portfolio"
 
 [tool.bumpversion]
-current_version = "0.1.0"
+current_version = "0.1.1"
 commit = true
 tag = true
 commit_args = "-s"
@@ -203,4 +203,3 @@ title = "finance portfolio"
 root = "README.md"
 pages = []
 use-autoapi = true
-
