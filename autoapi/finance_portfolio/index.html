@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="finance_portfolio.analysis" href="analysis/index.html"><link rel="prev" title="test_portfolio" href="../test_portfolio/index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
-        <title>finance_portfolio - finance portfolio v0.1.0</title>
+        <title>finance_portfolio - finance portfolio v0.1.1</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -167,7 +167,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">finance portfolio <code style='font-size: var(--font-size--small--4);color: var(--sd-color-primary);'>v0.1.0</code></div></a>
+      <a href="../../index.html"><div class="brand">finance portfolio <code style='font-size: var(--font-size--small--4);color: var(--sd-color-primary);'>v0.1.1</code></div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -188,7 +188,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
-  <span class="sidebar-brand-text">finance portfolio <code style='font-size: var(--font-size--small--4);color: var(--sd-color-primary);'>v0.1.0</code></span>
+  <span class="sidebar-brand-text">finance portfolio <code style='font-size: var(--font-size--small--4);color: var(--sd-color-primary);'>v0.1.1</code></span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -273,6 +273,12 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.RiskContribution" title="finance_portfolio.RiskContribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiskContribution</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.BrinsonAttribution" title="finance_portfolio.BrinsonAttribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BrinsonAttribution</span></code></a></p></td>
+<td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.ReturnAttribution" title="finance_portfolio.ReturnAttribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReturnAttribution</span></code></a></p></td>
+<td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.Holding" title="finance_portfolio.Holding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Holding</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
@@ -327,28 +333,37 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.tracking_error" title="finance_portfolio.tracking_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tracking_error</span></code></a>(→ float)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.equal_weights" title="finance_portfolio.equal_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">equal_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.brinson_attribution" title="finance_portfolio.brinson_attribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brinson_attribution</span></code></a>(→ BrinsonAttribution)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.rank_weights" title="finance_portfolio.rank_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rank_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.factor_return_decomposition" title="finance_portfolio.factor_return_decomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factor_return_decomposition</span></code></a>(→ ReturnAttribution)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.signal_proportional_weights" title="finance_portfolio.signal_proportional_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">signal_proportional_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.return_attribution_decomposition" title="finance_portfolio.return_attribution_decomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_attribution_decomposition</span></code></a>(→ ReturnAttribution)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.target_volatility_weights" title="finance_portfolio.target_volatility_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target_volatility_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.equal_weights" title="finance_portfolio.equal_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">equal_weights</span></code></a>(→ dict[str, float])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.hierarchical_risk_parity_weights" title="finance_portfolio.hierarchical_risk_parity_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hierarchical_risk_parity_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.rank_weights" title="finance_portfolio.rank_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rank_weights</span></code></a>(→ dict[str, float])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.mean_variance_weights" title="finance_portfolio.mean_variance_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_variance_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.signal_proportional_weights" title="finance_portfolio.signal_proportional_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">signal_proportional_weights</span></code></a>(→ dict[str, float])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.minimum_variance_weights" title="finance_portfolio.minimum_variance_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimum_variance_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.target_volatility_weights" title="finance_portfolio.target_volatility_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target_volatility_weights</span></code></a>(→ dict[str, float])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.risk_parity_weights" title="finance_portfolio.risk_parity_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">risk_parity_weights</span></code></a>(→ dict[str, float])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.hierarchical_risk_parity_weights" title="finance_portfolio.hierarchical_risk_parity_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hierarchical_risk_parity_weights</span></code></a>(→ dict[str, float])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.mean_variance_weights" title="finance_portfolio.mean_variance_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_variance_weights</span></code></a>(→ dict[str, float])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_portfolio.minimum_variance_weights" title="finance_portfolio.minimum_variance_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimum_variance_weights</span></code></a>(→ dict[str, float])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_portfolio.risk_parity_weights" title="finance_portfolio.risk_parity_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">risk_parity_weights</span></code></a>(→ dict[str, float])</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -559,6 +574,319 @@ validated to form a valid model.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="finance_portfolio.tracking_error">
 <span class="sig-prename descclassname"><span class="pre">finance_portfolio.</span></span><span class="sig-name descname"><span class="pre">tracking_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark_weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">covariance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="../../_modules/finance_portfolio/analytics.html#tracking_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_portfolio.tracking_error" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finance_portfolio.</span></span><span class="sig-name descname"><span class="pre">BrinsonAttribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**data:</span> <span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/finance_portfolio/attribution.html#BrinsonAttribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_portfolio.BrinsonAttribution" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
+<dl class="simple">
+<dt>!!! abstract “Usage Documentation”</dt><dd><p>[Models](../concepts/models.md)</p>
+</dd>
+</dl>
+<p>A base class for creating Pydantic models.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__class_vars__">
+<span class="sig-name descname"><span class="pre">__class_vars__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__class_vars__" title="Link to this definition">¶</a></dt>
+<dd><p>The names of the class variables defined on the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__private_attributes__">
+<span class="sig-name descname"><span class="pre">__private_attributes__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__private_attributes__" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the private attributes of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__signature__">
+<span class="sig-name descname"><span class="pre">__signature__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__signature__" title="Link to this definition">¶</a></dt>
+<dd><p>The synthesized <cite>__init__</cite> [<cite>Signature</cite>][inspect.Signature] of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_complete__">
+<span class="sig-name descname"><span class="pre">__pydantic_complete__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_complete__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether model building is completed, or if there are still undefined fields.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_core_schema__">
+<span class="sig-name descname"><span class="pre">__pydantic_core_schema__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_core_schema__" title="Link to this definition">¶</a></dt>
+<dd><p>The core schema of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_custom_init__">
+<span class="sig-name descname"><span class="pre">__pydantic_custom_init__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_custom_init__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the model has a custom <cite>__init__</cite> function.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_decorators__">
+<span class="sig-name descname"><span class="pre">__pydantic_decorators__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_decorators__" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata containing the decorators defined on the model.
+This replaces <cite>Model.__validators__</cite> and <cite>Model.__root_validators__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_generic_metadata__">
+<span class="sig-name descname"><span class="pre">__pydantic_generic_metadata__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_generic_metadata__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary containing metadata about generic Pydantic models.
+The <cite>origin</cite> and <cite>args</cite> items map to the [<cite>__origin__</cite>][genericalias.__origin__]
+and [<cite>__args__</cite>][genericalias.__args__] attributes of [generic aliases][types-genericalias],
+and the <cite>parameter</cite> item maps to the <cite>__parameter__</cite> attribute of generic classes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_parent_namespace__">
+<span class="sig-name descname"><span class="pre">__pydantic_parent_namespace__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_parent_namespace__" title="Link to this definition">¶</a></dt>
+<dd><p>Parent namespace of the model, used for automatic rebuilding of models.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_post_init__">
+<span class="sig-name descname"><span class="pre">__pydantic_post_init__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_post_init__" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the post-init method for the model, if defined.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_root_model__">
+<span class="sig-name descname"><span class="pre">__pydantic_root_model__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_root_model__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the model is a [<cite>RootModel</cite>][pydantic.root_model.RootModel].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_serializer__">
+<span class="sig-name descname"><span class="pre">__pydantic_serializer__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_serializer__" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>pydantic-core</cite> <cite>SchemaSerializer</cite> used to dump instances of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_validator__">
+<span class="sig-name descname"><span class="pre">__pydantic_validator__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_validator__" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>pydantic-core</cite> <cite>SchemaValidator</cite> used to validate instances of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_fields__">
+<span class="sig-name descname"><span class="pre">__pydantic_fields__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_fields__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of field names and their corresponding [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_computed_fields__">
+<span class="sig-name descname"><span class="pre">__pydantic_computed_fields__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_computed_fields__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding [<cite>ComputedFieldInfo</cite>][pydantic.fields.ComputedFieldInfo] objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_extra__">
+<span class="sig-name descname"><span class="pre">__pydantic_extra__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_extra__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary containing extra values, if [<cite>extra</cite>][pydantic.config.ConfigDict.extra]
+is set to <cite>‘allow’</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_fields_set__">
+<span class="sig-name descname"><span class="pre">__pydantic_fields_set__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_fields_set__" title="Link to this definition">¶</a></dt>
+<dd><p>The names of fields explicitly set during instantiation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.__pydantic_private__">
+<span class="sig-name descname"><span class="pre">__pydantic_private__</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.__pydantic_private__" title="Link to this definition">¶</a></dt>
+<dd><p>Values of private attributes set on the model instance.</p>
+</dd></dl>
+
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.allocation_effect">
+<span class="sig-name descname"><span class="pre">allocation_effect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.allocation_effect" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.selection_effect">
+<span class="sig-name descname"><span class="pre">selection_effect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.selection_effect" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.interaction_effect">
+<span class="sig-name descname"><span class="pre">interaction_effect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.interaction_effect" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.BrinsonAttribution.total_effect">
+<span class="sig-name descname"><span class="pre">total_effect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#finance_portfolio.BrinsonAttribution.total_effect" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finance_portfolio.</span></span><span class="sig-name descname"><span class="pre">ReturnAttribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**data:</span> <span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/finance_portfolio/attribution.html#ReturnAttribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_portfolio.ReturnAttribution" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
+<dl class="simple">
+<dt>!!! abstract “Usage Documentation”</dt><dd><p>[Models](../concepts/models.md)</p>
+</dd>
+</dl>
+<p>A base class for creating Pydantic models.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__class_vars__">
+<span class="sig-name descname"><span class="pre">__class_vars__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__class_vars__" title="Link to this definition">¶</a></dt>
+<dd><p>The names of the class variables defined on the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__private_attributes__">
+<span class="sig-name descname"><span class="pre">__private_attributes__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__private_attributes__" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the private attributes of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__signature__">
+<span class="sig-name descname"><span class="pre">__signature__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__signature__" title="Link to this definition">¶</a></dt>
+<dd><p>The synthesized <cite>__init__</cite> [<cite>Signature</cite>][inspect.Signature] of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_complete__">
+<span class="sig-name descname"><span class="pre">__pydantic_complete__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_complete__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether model building is completed, or if there are still undefined fields.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_core_schema__">
+<span class="sig-name descname"><span class="pre">__pydantic_core_schema__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_core_schema__" title="Link to this definition">¶</a></dt>
+<dd><p>The core schema of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_custom_init__">
+<span class="sig-name descname"><span class="pre">__pydantic_custom_init__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_custom_init__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the model has a custom <cite>__init__</cite> function.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_decorators__">
+<span class="sig-name descname"><span class="pre">__pydantic_decorators__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_decorators__" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata containing the decorators defined on the model.
+This replaces <cite>Model.__validators__</cite> and <cite>Model.__root_validators__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_generic_metadata__">
+<span class="sig-name descname"><span class="pre">__pydantic_generic_metadata__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_generic_metadata__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary containing metadata about generic Pydantic models.
+The <cite>origin</cite> and <cite>args</cite> items map to the [<cite>__origin__</cite>][genericalias.__origin__]
+and [<cite>__args__</cite>][genericalias.__args__] attributes of [generic aliases][types-genericalias],
+and the <cite>parameter</cite> item maps to the <cite>__parameter__</cite> attribute of generic classes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_parent_namespace__">
+<span class="sig-name descname"><span class="pre">__pydantic_parent_namespace__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_parent_namespace__" title="Link to this definition">¶</a></dt>
+<dd><p>Parent namespace of the model, used for automatic rebuilding of models.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_post_init__">
+<span class="sig-name descname"><span class="pre">__pydantic_post_init__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_post_init__" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the post-init method for the model, if defined.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_root_model__">
+<span class="sig-name descname"><span class="pre">__pydantic_root_model__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_root_model__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the model is a [<cite>RootModel</cite>][pydantic.root_model.RootModel].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_serializer__">
+<span class="sig-name descname"><span class="pre">__pydantic_serializer__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_serializer__" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>pydantic-core</cite> <cite>SchemaSerializer</cite> used to dump instances of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_validator__">
+<span class="sig-name descname"><span class="pre">__pydantic_validator__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_validator__" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>pydantic-core</cite> <cite>SchemaValidator</cite> used to validate instances of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_fields__">
+<span class="sig-name descname"><span class="pre">__pydantic_fields__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_fields__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of field names and their corresponding [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_computed_fields__">
+<span class="sig-name descname"><span class="pre">__pydantic_computed_fields__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_computed_fields__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding [<cite>ComputedFieldInfo</cite>][pydantic.fields.ComputedFieldInfo] objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_extra__">
+<span class="sig-name descname"><span class="pre">__pydantic_extra__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_extra__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary containing extra values, if [<cite>extra</cite>][pydantic.config.ConfigDict.extra]
+is set to <cite>‘allow’</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_fields_set__">
+<span class="sig-name descname"><span class="pre">__pydantic_fields_set__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_fields_set__" title="Link to this definition">¶</a></dt>
+<dd><p>The names of fields explicitly set during instantiation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.__pydantic_private__">
+<span class="sig-name descname"><span class="pre">__pydantic_private__</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.__pydantic_private__" title="Link to this definition">¶</a></dt>
+<dd><p>Values of private attributes set on the model instance.</p>
+</dd></dl>
+
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><a class="headerlink" href="#finance_portfolio.ReturnAttribution.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.components">
+<span class="sig-name descname"><span class="pre">components</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#finance_portfolio.ReturnAttribution.components" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_portfolio.ReturnAttribution.total_return">
+<span class="sig-name descname"><span class="pre">total_return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#finance_portfolio.ReturnAttribution.total_return" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="finance_portfolio.brinson_attribution">
+<span class="sig-prename descclassname"><span class="pre">finance_portfolio.</span></span><span class="sig-name descname"><span class="pre">brinson_attribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark_weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_returns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark_returns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#finance_portfolio.BrinsonAttribution" title="finance_portfolio.BrinsonAttribution"><span class="pre">BrinsonAttribution</span></a></span></span><a class="reference internal" href="../../_modules/finance_portfolio/attribution.html#brinson_attribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_portfolio.brinson_attribution" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="finance_portfolio.factor_return_decomposition">
+<span class="sig-prename descclassname"><span class="pre">finance_portfolio.</span></span><span class="sig-name descname"><span class="pre">factor_return_decomposition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exposures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_returns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#finance_portfolio.ReturnAttribution" title="finance_portfolio.ReturnAttribution"><span class="pre">ReturnAttribution</span></a></span></span><a class="reference internal" href="../../_modules/finance_portfolio/attribution.html#factor_return_decomposition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_portfolio.factor_return_decomposition" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="finance_portfolio.return_attribution_decomposition">
+<span class="sig-prename descclassname"><span class="pre">finance_portfolio.</span></span><span class="sig-name descname"><span class="pre">return_attribution_decomposition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#finance_portfolio.ReturnAttribution" title="finance_portfolio.ReturnAttribution"><span class="pre">ReturnAttribution</span></a></span></span><a class="reference internal" href="../../_modules/finance_portfolio/attribution.html#return_attribution_decomposition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_portfolio.return_attribution_decomposition" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -1361,6 +1689,59 @@ validated to form a valid model.</p>
 <li><a class="reference internal" href="#finance_portfolio.portfolio_volatility"><code class="docutils literal notranslate"><span class="pre">portfolio_volatility()</span></code></a></li>
 <li><a class="reference internal" href="#finance_portfolio.risk_contribution"><code class="docutils literal notranslate"><span class="pre">risk_contribution()</span></code></a></li>
 <li><a class="reference internal" href="#finance_portfolio.tracking_error"><code class="docutils literal notranslate"><span class="pre">tracking_error()</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution</span></code></a><ul>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__class_vars__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__class_vars__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__private_attributes__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__private_attributes__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__signature__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__signature__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_complete__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_complete__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_core_schema__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_core_schema__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_custom_init__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_custom_init__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_decorators__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_decorators__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_generic_metadata__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_generic_metadata__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_parent_namespace__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_parent_namespace__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_post_init__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_post_init__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_root_model__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_root_model__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_serializer__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_serializer__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_validator__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_validator__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_fields__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_fields__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_computed_fields__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_computed_fields__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_extra__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_extra__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_fields_set__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_fields_set__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.__pydantic_private__"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.__pydantic_private__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.model_config"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.model_config</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.allocation_effect"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.allocation_effect</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.selection_effect"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.selection_effect</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.interaction_effect"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.interaction_effect</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.BrinsonAttribution.total_effect"><code class="docutils literal notranslate"><span class="pre">BrinsonAttribution.total_effect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution</span></code></a><ul>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__class_vars__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__class_vars__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__private_attributes__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__private_attributes__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__signature__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__signature__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_complete__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_complete__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_core_schema__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_core_schema__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_custom_init__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_custom_init__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_decorators__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_decorators__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_generic_metadata__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_generic_metadata__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_parent_namespace__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_parent_namespace__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_post_init__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_post_init__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_root_model__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_root_model__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_serializer__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_serializer__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_validator__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_validator__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_fields__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_fields__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_computed_fields__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_computed_fields__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_extra__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_extra__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_fields_set__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_fields_set__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.__pydantic_private__"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.__pydantic_private__</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.model_config"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.model_config</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.components"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.components</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.ReturnAttribution.total_return"><code class="docutils literal notranslate"><span class="pre">ReturnAttribution.total_return</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#finance_portfolio.brinson_attribution"><code class="docutils literal notranslate"><span class="pre">brinson_attribution()</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.factor_return_decomposition"><code class="docutils literal notranslate"><span class="pre">factor_return_decomposition()</span></code></a></li>
+<li><a class="reference internal" href="#finance_portfolio.return_attribution_decomposition"><code class="docutils literal notranslate"><span class="pre">return_attribution_decomposition()</span></code></a></li>
 <li><a class="reference internal" href="#finance_portfolio.equal_weights"><code class="docutils literal notranslate"><span class="pre">equal_weights()</span></code></a></li>
 <li><a class="reference internal" href="#finance_portfolio.rank_weights"><code class="docutils literal notranslate"><span class="pre">rank_weights()</span></code></a></li>
 <li><a class="reference internal" href="#finance_portfolio.signal_proportional_weights"><code class="docutils literal notranslate"><span class="pre">signal_proportional_weights()</span></code></a></li>
@@ -1495,7 +1876,7 @@ validated to form a valid model.</p>
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=01f34227"></script>
+</div><script src="../../_static/documentation_options.js?v=a58bc63e"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>
