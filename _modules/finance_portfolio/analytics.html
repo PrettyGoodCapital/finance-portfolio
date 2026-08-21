@@ -255,12 +255,12 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">finance_portfolio</span> <span class="k">as</span> <span class="n">_native</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;RiskContribution&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;active_share&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;portfolio_variance&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;portfolio_volatility&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;risk_contribution&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;tracking_error&quot;</span><span class="p">,</span>
+    <span class="s2">"RiskContribution"</span><span class="p">,</span>
+    <span class="s2">"active_share"</span><span class="p">,</span>
+    <span class="s2">"portfolio_variance"</span><span class="p">,</span>
+    <span class="s2">"portfolio_volatility"</span><span class="p">,</span>
+    <span class="s2">"risk_contribution"</span><span class="p">,</span>
+    <span class="s2">"tracking_error"</span><span class="p">,</span>
 <span class="p">]</span>
 
 
@@ -288,7 +288,7 @@
     <span class="n">w</span> <span class="o">=</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">cov</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;covariance dimensions must match weights&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"covariance dimensions must match weights"</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">_native</span><span class="o">.</span><span class="n">portfolio_variance</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">cov</span><span class="o">.</span><span class="n">tolist</span><span class="p">()))</span></div>
 
 
@@ -299,7 +299,7 @@
     <span class="n">w</span> <span class="o">=</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">cov</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;covariance dimensions must match weights&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"covariance dimensions must match weights"</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">_native</span><span class="o">.</span><span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">cov</span><span class="o">.</span><span class="n">tolist</span><span class="p">()))</span></div>
 
 
@@ -310,7 +310,7 @@
     <span class="n">w</span> <span class="o">=</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">cov</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;covariance dimensions must match weights&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"covariance dimensions must match weights"</span><span class="p">)</span>
     <span class="n">marginal</span><span class="p">,</span> <span class="n">component</span><span class="p">,</span> <span class="n">percentage</span> <span class="o">=</span> <span class="n">_native</span><span class="o">.</span><span class="n">risk_contribution</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">cov</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">RiskContribution</span><span class="p">(</span>
         <span class="n">marginal</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">marginal</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span>
@@ -331,7 +331,7 @@
     <span class="n">active</span> <span class="o">=</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">assets</span><span class="p">)</span> <span class="o">-</span> <span class="n">_weights_vector</span><span class="p">(</span><span class="n">benchmark_weights</span><span class="p">,</span> <span class="n">assets</span><span class="p">)</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">covariance</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">cov</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="n">active</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">active</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;covariance dimensions must match weights&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"covariance dimensions must match weights"</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">_native</span><span class="o">.</span><span class="n">tracking_error</span><span class="p">(</span><span class="n">active</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">cov</span><span class="o">.</span><span class="n">tolist</span><span class="p">()))</span></div>
 
 

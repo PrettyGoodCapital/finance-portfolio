@@ -253,12 +253,12 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">finance_enums</span><span class="w"> </span><span class="kn">import</span> <span class="n">Frequency</span><span class="p">,</span> <span class="n">to_frequency</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;active_weights&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;portfolio_analysis_panel&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rebalance_schedule&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;return_contributions&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;turnover&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;weight_drift&quot;</span><span class="p">,</span>
+    <span class="s2">"active_weights"</span><span class="p">,</span>
+    <span class="s2">"portfolio_analysis_panel"</span><span class="p">,</span>
+    <span class="s2">"rebalance_schedule"</span><span class="p">,</span>
+    <span class="s2">"return_contributions"</span><span class="p">,</span>
+    <span class="s2">"turnover"</span><span class="p">,</span>
+    <span class="s2">"weight_drift"</span><span class="p">,</span>
 <span class="p">]</span>
 
 
@@ -345,13 +345,13 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="n">symbols</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s2">&quot;as_of&quot;</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Date</span><span class="p">),</span>
-                <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">String</span><span class="p">),</span>
-                <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
-                <span class="s2">&quot;benchmark_weight&quot;</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
-                <span class="s2">&quot;active_weight&quot;</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
-                <span class="s2">&quot;return&quot;</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
-                <span class="s2">&quot;contribution&quot;</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
+                <span class="s2">"as_of"</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Date</span><span class="p">),</span>
+                <span class="s2">"symbol"</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">String</span><span class="p">),</span>
+                <span class="s2">"weight"</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
+                <span class="s2">"benchmark_weight"</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
+                <span class="s2">"active_weight"</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
+                <span class="s2">"return"</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
+                <span class="s2">"contribution"</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Series</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Float64</span><span class="p">),</span>
             <span class="p">}</span>
         <span class="p">)</span>
 
@@ -362,13 +362,13 @@
         <span class="n">ret</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">daily_returns</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>
         <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s2">&quot;as_of&quot;</span><span class="p">:</span> <span class="n">as_of</span><span class="p">,</span>
-                <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="n">symbol</span><span class="p">,</span>
-                <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="n">weight</span><span class="p">,</span>
-                <span class="s2">&quot;benchmark_weight&quot;</span><span class="p">:</span> <span class="n">bench</span><span class="p">,</span>
-                <span class="s2">&quot;active_weight&quot;</span><span class="p">:</span> <span class="n">weight</span> <span class="o">-</span> <span class="n">bench</span><span class="p">,</span>
-                <span class="s2">&quot;return&quot;</span><span class="p">:</span> <span class="n">ret</span><span class="p">,</span>
-                <span class="s2">&quot;contribution&quot;</span><span class="p">:</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">ret</span><span class="p">,</span>
+                <span class="s2">"as_of"</span><span class="p">:</span> <span class="n">as_of</span><span class="p">,</span>
+                <span class="s2">"symbol"</span><span class="p">:</span> <span class="n">symbol</span><span class="p">,</span>
+                <span class="s2">"weight"</span><span class="p">:</span> <span class="n">weight</span><span class="p">,</span>
+                <span class="s2">"benchmark_weight"</span><span class="p">:</span> <span class="n">bench</span><span class="p">,</span>
+                <span class="s2">"active_weight"</span><span class="p">:</span> <span class="n">weight</span> <span class="o">-</span> <span class="n">bench</span><span class="p">,</span>
+                <span class="s2">"return"</span><span class="p">:</span> <span class="n">ret</span><span class="p">,</span>
+                <span class="s2">"contribution"</span><span class="p">:</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">ret</span><span class="p">,</span>
             <span class="p">}</span>
         <span class="p">)</span>
     <span class="k">return</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span></div>
