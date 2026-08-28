@@ -239,7 +239,7 @@ Module Contents
 
 
    .. py:attribute:: holdings
-      :type:  tuple[Holding, Ellipsis]
+      :type:  tuple[Holding, ...]
 
 
    .. py:attribute:: name
@@ -509,7 +509,7 @@ Module Contents
 
 
    .. py:attribute:: constituents
-      :type:  tuple[IndexConstituent, Ellipsis]
+      :type:  tuple[IndexConstituent, ...]
 
 
    .. py:attribute:: name

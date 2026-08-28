@@ -28,7 +28,7 @@ Module Contents
 
 .. py:function:: return_contributions(weights: collections.abc.Mapping[str, float], returns: collections.abc.Mapping[str, float]) -> dict[str, float]
 
-.. py:function:: rebalance_schedule(dates: collections.abc.Sequence[datetime.date], frequency: finance_enums.Frequency | str) -> tuple[datetime.date, Ellipsis]
+.. py:function:: rebalance_schedule(dates: collections.abc.Sequence[datetime.date], frequency: finance_enums.Frequency | str) -> tuple[datetime.date, ...]
 
 .. py:function:: portfolio_analysis_panel(*, as_of: datetime.date, weights: collections.abc.Mapping[str, float], benchmark_weights: collections.abc.Mapping[str, float] | None = None, returns: collections.abc.Mapping[str, float] | None = None) -> polars.DataFrame
 
