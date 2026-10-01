@@ -276,7 +276,7 @@
 
 
 <div class="viewcode-block" id="minimum_variance_weights">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.minimum_variance_weights">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.optimization.minimum_variance_weights">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">minimum_variance_weights</span><span class="p">(</span><span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">assets</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">_covariance</span><span class="p">(</span><span class="n">covariance</span><span class="p">)</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">_labels</span><span class="p">(</span><span class="n">assets</span><span class="p">,</span> <span class="n">cov</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -286,7 +286,7 @@
 
 
 <div class="viewcode-block" id="mean_variance_weights">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.mean_variance_weights">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.optimization.mean_variance_weights">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">mean_variance_weights</span><span class="p">(</span>
     <span class="n">expected_returns</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">risk_aversion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">assets</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
@@ -301,7 +301,7 @@
 
 
 <div class="viewcode-block" id="risk_parity_weights">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.risk_parity_weights">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.optimization.risk_parity_weights">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">risk_parity_weights</span><span class="p">(</span><span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">assets</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_iter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1_000</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">_covariance</span><span class="p">(</span><span class="n">covariance</span><span class="p">)</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">_labels</span><span class="p">(</span><span class="n">assets</span><span class="p">,</span> <span class="n">cov</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -311,7 +311,7 @@
 
 
 <div class="viewcode-block" id="hierarchical_risk_parity_weights">
-<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.hierarchical_risk_parity_weights">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_portfolio/optimization/index.html#finance_portfolio.optimization.hierarchical_risk_parity_weights">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">hierarchical_risk_parity_weights</span><span class="p">(</span><span class="n">covariance</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">assets</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
     <span class="n">cov</span> <span class="o">=</span> <span class="n">_covariance</span><span class="p">(</span><span class="n">covariance</span><span class="p">)</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">_labels</span><span class="p">(</span><span class="n">assets</span><span class="p">,</span> <span class="n">cov</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
