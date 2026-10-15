@@ -1,0 +1,61 @@
+finance_portfolio.finance_portfolio
+===================================
+
+.. py:module:: finance_portfolio.finance_portfolio
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   finance_portfolio.finance_portfolio.equal_weights
+   finance_portfolio.finance_portfolio.rank_weights
+   finance_portfolio.finance_portfolio.signal_proportional_weights
+   finance_portfolio.finance_portfolio.target_volatility_weights
+   finance_portfolio.finance_portfolio.minimum_variance_weights
+   finance_portfolio.finance_portfolio.mean_variance_weights
+   finance_portfolio.finance_portfolio.risk_parity_weights
+   finance_portfolio.finance_portfolio.hierarchical_risk_parity_weights
+   finance_portfolio.finance_portfolio.portfolio_variance
+   finance_portfolio.finance_portfolio.portfolio_volatility
+   finance_portfolio.finance_portfolio.risk_contribution
+   finance_portfolio.finance_portfolio.tracking_error
+   finance_portfolio.finance_portfolio.active_share
+   finance_portfolio.finance_portfolio.brinson_attribution
+   finance_portfolio.finance_portfolio.factor_return_decomposition
+
+
+Module Contents
+---------------
+
+.. py:function:: equal_weights(count: int) -> list[float]
+
+.. py:function:: rank_weights(values: collections.abc.Sequence[float], ascending: bool) -> list[float]
+
+.. py:function:: signal_proportional_weights(values: collections.abc.Sequence[float]) -> list[float]
+
+.. py:function:: target_volatility_weights(volatility: collections.abc.Sequence[float]) -> list[float]
+
+.. py:function:: minimum_variance_weights(covariance: collections.abc.Sequence[collections.abc.Sequence[float]]) -> list[float]
+
+.. py:function:: mean_variance_weights(expected_returns: collections.abc.Sequence[float], covariance: collections.abc.Sequence[collections.abc.Sequence[float]], risk_aversion: float) -> list[float]
+
+.. py:function:: risk_parity_weights(covariance: collections.abc.Sequence[collections.abc.Sequence[float]], max_iter: int, tolerance: float) -> list[float]
+
+.. py:function:: hierarchical_risk_parity_weights(covariance: collections.abc.Sequence[collections.abc.Sequence[float]]) -> list[float]
+
+.. py:function:: portfolio_variance(weights: collections.abc.Sequence[float], covariance: collections.abc.Sequence[collections.abc.Sequence[float]]) -> float
+
+.. py:function:: portfolio_volatility(weights: collections.abc.Sequence[float], covariance: collections.abc.Sequence[collections.abc.Sequence[float]]) -> float
+
+.. py:function:: risk_contribution(weights: collections.abc.Sequence[float], covariance: collections.abc.Sequence[collections.abc.Sequence[float]]) -> tuple[list[float], list[float], list[float]]
+
+.. py:function:: tracking_error(active_weights: collections.abc.Sequence[float], covariance: collections.abc.Sequence[collections.abc.Sequence[float]]) -> float
+
+.. py:function:: active_share(active_weights: collections.abc.Sequence[float]) -> float
+
+.. py:function:: brinson_attribution(portfolio_weights: collections.abc.Sequence[float], benchmark_weights: collections.abc.Sequence[float], portfolio_returns: collections.abc.Sequence[float], benchmark_returns: collections.abc.Sequence[float]) -> tuple[float, float, float, float]
+
+.. py:function:: factor_return_decomposition(exposures: collections.abc.Sequence[float], factor_returns: collections.abc.Sequence[float]) -> tuple[list[float], float]
+

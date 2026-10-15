@@ -14,6 +14,7 @@ Submodules
    /autoapi/finance_portfolio/analytics/index
    /autoapi/finance_portfolio/attribution/index
    /autoapi/finance_portfolio/construction/index
+   /autoapi/finance_portfolio/finance_portfolio/index
    /autoapi/finance_portfolio/optimization/index
    /autoapi/finance_portfolio/structures/index
 
@@ -55,6 +56,10 @@ Functions
    finance_portfolio.rank_weights
    finance_portfolio.signal_proportional_weights
    finance_portfolio.target_volatility_weights
+   finance_portfolio.hierarchical_risk_parity_weights
+   finance_portfolio.mean_variance_weights
+   finance_portfolio.minimum_variance_weights
+   finance_portfolio.risk_parity_weights
 
 
 Package Contents
@@ -431,6 +436,14 @@ Package Contents
 .. py:function:: signal_proportional_weights(signals: collections.abc.Mapping[str, float]) -> dict[str, float]
 
 .. py:function:: target_volatility_weights(volatility: collections.abc.Mapping[str, float]) -> dict[str, float]
+
+.. py:function:: hierarchical_risk_parity_weights(covariance: Any, *, assets: collections.abc.Sequence[str] | None = None) -> dict[str, float]
+
+.. py:function:: mean_variance_weights(expected_returns: Any, covariance: Any, *, risk_aversion: float = 1.0, assets: collections.abc.Sequence[str] | None = None) -> dict[str, float]
+
+.. py:function:: minimum_variance_weights(covariance: Any, *, assets: collections.abc.Sequence[str] | None = None) -> dict[str, float]
+
+.. py:function:: risk_parity_weights(covariance: Any, *, assets: collections.abc.Sequence[str] | None = None, max_iter: int = 1000, tolerance: float = 1e-10) -> dict[str, float]
 
 .. py:class:: Holding(/, **data: Any)
 
